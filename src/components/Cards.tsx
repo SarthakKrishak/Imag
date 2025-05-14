@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useRef } from "react";
 import right from "/right.svg";
 import toast from "react-hot-toast";
-import image2 from "/image64.jpg";
+import image2 from "/image64.png";
+
 interface CardProps {
   image: string;
   name: string;
@@ -27,6 +28,22 @@ const Card: React.FC<CardProps> = ({
 }) => {
   const layoutDirection =
     imagePosition === "right" ? "md:flex-row-reverse" : "md:flex-row";
+  const toastCooldownRef = useRef(false);
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (!liveUrl) {
+      e.preventDefault();
+
+      if (!toastCooldownRef.current) {
+        toast("Coming Soon...");
+        toastCooldownRef.current = true;
+        setTimeout(() => {
+          toastCooldownRef.current = false;
+        }, 3000);
+      }
+    }
+  };
+
 
   return (
     <div
@@ -82,16 +99,10 @@ const Card: React.FC<CardProps> = ({
         <div className="md:mt-4 mt-6 lg:mt-8 flex items-center gap-4 md:pl-7 pl-3">
           <a
             href={liveUrl}
-            onClick={(e) => {
-              if (!liveUrl) {
-                e.preventDefault();
-                toast("Coming Soon...");
-              }
-            }}
+            onClick={handleClick}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[linear-gradient(180deg,_rgba(0,0,0,0)_-40.91%,_#002094_132.95%)] px-6 py-3 md:px-4 md:py-2 lg:px-6 lg:py-3 font-sans rounded-lg text-sm md:text-xs lg:text-sm font-medium transition border-[#ffffff] border-opacity-20 border-2 shadow-[inset_0px_14.04px_42.12px_0px_#497BFFB2,_0px_14.04px_56.16px_0px_#3F4AAF80] 
-            backdrop-blur-[28.07938575744629px] hover:scale-105 duration-500 ease-in-out"
+            className="bg-gradient-to-b from-black/0 to-blue-900 px-6 py-3 md:px-4 md:py-2 lg:px-6 lg:py-3 font-sans rounded-lg text-sm md:text-xs lg:text-sm font-medium transition shadow-[inset_0px_14.039692878723145px_42.11907958984375px_0px_rgba(73,123,255,0.70)] outline outline-[1.40px] outline-offset-[-1.40px] outline-blue-700 backdrop-blur-xl hover:scale-105 duration-500 ease-in-out"
           >
             <div className="flex justify-center items-center gap-2">
               {buttonText}

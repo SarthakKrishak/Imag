@@ -73,7 +73,7 @@ const Hero = () => {
               shouldAnimate ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
             }
             transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
-            className="relative overflow-hidden rounded-3xl px-4 md:px-6 py-2 flex items-center bg-gradient-to-b from-white to-neutral-400 shadow-[0px_12px_60px_0px_rgba(57,143,255,0.60)]"
+            className="relative overflow-hidden rounded-3xl px-4 md:px-6 py-2 flex items-center bg-gradient-to-b from-white to-neutral-400 shadow-[0px_12px_60px_0px_rgba(57,143,255,0.60)] inline-flex"
             aria-label="Explore Now Button"
           >
             <motion.div

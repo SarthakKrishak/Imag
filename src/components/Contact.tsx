@@ -74,8 +74,8 @@ const Contact = () => {
         >
           <a
             href="mailto:Imaginum.org@gmail.com"
-            className="flex items-center gap-2 lg:px-10 px-12  md:py-5 lg:py-4  py-[1.7vh] font-semibold rounded-lg text-sm justify-start md:justify-center lg:w-[19vw] outline outline-1 outline-offset-[-1px] outline-neutral-700  bg-black/60 backdrop-blur-md text-white transition-all duration-300 
-                hover:scale-105 hover:shadow-xl hover:shadow-white/10 hover:bg-white/5 font-['Figtree'] tracking-wide"
+            className="flex items-center gap-2 lg:px-10 px-12  md:py-5 lg:py-4  py-[1.7vh] font-semibold rounded-lg text-sm justify-start md:justify-center lg:w-[19vw] outline outline-1 outline-offset-[-1px] outline-neutral-700  bg-black/60 backdrop-blur-md text-white transition-all duration-500 
+                hover:scale-105 hover:shadow-xl hover:shadow-white/10 font-['Figtree'] tracking-wide ease-in-out"
           >
             <img
               src={mail}
@@ -83,13 +83,13 @@ const Contact = () => {
               className="md:w-5 md:h-5 w-4 h-4"
               loading="lazy"
             />
-            <h1> Imaginum.org@gmail.com</h1>
+            <h1>Imaginum.org@gmail.com</h1>
           </a>
           <a
             href="https://www.linkedin.com/company/imaginumorgg/"
             target="_blank"
-            className="flex items-center gap-2 bg-black/60 lg:px-10 px-12 md:py-5 lg:py-4 py-[1.7vh] font-semibold rounded-lg text-sm justify-between md:justify-center lg:w-[19vw] outline outline-1 outline-offset-[-1px] outline-neutral-700   backdrop-blur-md text-white transition-all duration-300 
-                hover:scale-105 hover:shadow-xl hover:shadow-white/10 hover:bg-white/5 font-['Figtree'] tracking-wide"
+            className="flex items-center gap-2 lg:px-10 px-12  md:py-5 lg:py-4  py-[1.7vh] font-semibold rounded-lg text-sm justify-start md:justify-center lg:w-[19vw] outline outline-1 outline-offset-[-1px] outline-neutral-700  bg-black/60 backdrop-blur-md text-white transition-all duration-500 
+                hover:scale-105 hover:shadow-xl hover:shadow-white/10 font-['Figtree'] tracking-wide ease-in-out"
           >
             <img
               src={linkedin}
@@ -102,8 +102,8 @@ const Contact = () => {
           <a
             href="https://www.instagram.com/ima.ginum/"
             target="_blank"
-            className="flex items-center gap-2 bg-black/60 lg:px-10 px-12 md:py-5 lg:py-4 py-[1.7vh] font-semibold rounded-lg text-sm justify-between md:justify-center lg:w-[19vw] outline outline-1 outline-offset-[-1px] outline-neutral-700   backdrop-blur-md text-white transition-all duration-300 
-                hover:scale-105 hover:shadow-xl hover:shadow-white/10 hover:bg-white/5 font-['Figtree'] tracking-wide"
+            className="flex items-center gap-2 lg:px-10 px-12  md:py-5 lg:py-4  py-[1.7vh] font-semibold rounded-lg text-sm justify-start md:justify-center lg:w-[19vw] outline outline-1 outline-offset-[-1px] outline-neutral-700  bg-black/60 backdrop-blur-md text-white transition-all duration-500 
+                hover:scale-105 hover:shadow-xl hover:shadow-white/10 font-['Figtree'] tracking-wide ease-in-out"
           >
             <img
               src={insta}

@@ -54,15 +54,15 @@ useEffect(() => {
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
-        <div className="max-w-7xl mx-auto lg:flex gap-8 pb-24 justify-between">
+        <div className="max-w-7xl mx-auto lg:flex gap-8 pb-24 md:pb-0 lg:pb-24 justify-between">
           <div>
             <a
               href="/"
-              className="text-3xl font-semibold text-blue-500 hover:text-blue-700 transition-colors duration-300 mb-3 font-['Figtree'] tracking-wide"
+              className="text-2xl font-semibold text-blue-500 hover:text-blue-700 transition-colors duration-300 mb-3 font-['Figtree'] tracking-wide"
             >
               Imaginum
             </a>
-            <p className="text-md text-gray-300 max-w-xs font-['Figtree'] tracking-wide font-light lg:w-64 lg:mt-4">
+            <p className="text-base text-gray-300 max-w-xs font-['Figtree'] tracking-wide font-light lg:w-64 lg:mt-4 mt-2">
               Building next-generation digital experiences with cutting-edge
               technology and futuristic design.
             </p>
@@ -70,10 +70,10 @@ useEffect(() => {
 
           <div className="lg:flex justify-between gap-24 md:mt-[5vh] mt-[6vh] lg:mt-0">
             <div>
-              <h3 className="text-xl font-semibold mb-4 font-['Geist'] tracking-wide">
+              <h3 className="text-lg font-semibold mb-4 font-['Geist'] tracking-wide">
                 Quick Links
               </h3>
-              <ul className="lg:space-y-1 text-lg text-gray-300 font-['Figtree'] tracking-wide font-light">
+              <ul className="lg:space-y-1 text-base text-gray-300 font-['Figtree'] tracking-wide font-light">
                 <li>
                   <button
                     className="inline-block text-gray-300 transition-all duration-300 ease-out 
@@ -169,7 +169,7 @@ useEffect(() => {
             </div>
 
             <div>
-              <h3 className="text-[19px] lg:text-xl font-semibold lg:mb-4 md:mt-[5vh] md:mb-4 mt-[4vh] lg:mt-0 mb-[1.5vh] font-['Geist']">
+              <h3 className="text-lg lg:text-xl font-semibold lg:mb-4 md:mt-[5vh] md:mb-4 mt-[4vh] lg:mt-0 mb-[1.5vh] font-['Geist']">
                 Follow Us
               </h3>
               <div className="flex items-center gap-4 lg:gap-5 text-2xl aspect-auto">
@@ -226,11 +226,11 @@ useEffect(() => {
           </div>
         </div>
 
-        <div className="absolute lg:w-[77.5vw] md:bottom-[7vh]  w-[88vw] bottom-[2.5vh] md:w-[82vw] ">
+        <div className="absolute lg:w-[77.5vw] md:bottom-[7vh] w-[88vw] bottom-[2.5vh] md:w-[82vw] ">
           <div className=" w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-white mb-[1.3vh] md:mb-[2vh] lg:mb-[2.5vh]"></div>
           <div className="flex justify-between items-center">
             <div className="text-sm lg:text-md md:text-base text-white font-semibold lg:bottom-[6vh] cursor-default font-['Figtree'] tracking-wide hover:underline">
-              <div>© 2025 Imaginum. All rights reserved.</div>
+              <h3>© 2025 Imaginum. All rights reserved.</h3>
             </div>
             <button
               id="scrollArrow"

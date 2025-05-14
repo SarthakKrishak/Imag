@@ -55,56 +55,53 @@ const Projects = () => {
     <>
       <Toaster position="top-center" />
       <div className="relative">
-      <motion.img
-        style={{ x: img1X, y: img1Y }}
-        drag
-        dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
-        dragElastic={0.8}
-        dragMomentum={false}
-        whileTap={{ scale: 0.95 }}
-        whileDrag={{ zIndex: 50 }}
-        onDragEnd={() => {
-          animate(img1X, 70, { type: "spring", stiffness: 200 });
-          animate(img1Y, -210, { type: "spring", stiffness: 200 });
-        }}
-        src={element}
-        alt="Draggable Element"
-        className="absolute h-28 md:h-35  md:top-[2.8rem] lg:top-[1rem] lg:h-40  md:left-32 left-2 top-[3.2rem] z-20 cursor-grab active:cursor-grabbing md:block"
-        loading="lazy" 
-      />
+        <motion.img
+          style={{ x: img1X, y: img1Y }}
+          drag
+          dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
+          dragElastic={0.8}
+          dragMomentum={false}
+          whileTap={{ scale: 0.95 }}
+          whileDrag={{ zIndex: 50 }}
+          onDragEnd={() => {
+            animate(img1X, 70, { type: "spring", stiffness: 200 });
+            animate(img1Y, -210, { type: "spring", stiffness: 200 });
+          }}
+          src={element}
+          alt="Draggable Element"
+          className="absolute h-28 md:h-35  md:top-[2.8rem] lg:top-[1rem] lg:h-40  md:left-32 left-2 top-[3.2rem] z-20 cursor-grab active:cursor-grabbing md:block"
+          loading="lazy"
+        />
 
+        <img
+          src={hexa}
+          alt="Background Hexagon"
+          className="md:h-[30rem] h-[20rem] ml-4 absolute z-0"
+          loading="lazy"
+        />
 
-      <img
-        src={hexa}
-        alt="Background Hexagon"
-        className="md:h-[30rem] h-[20rem] ml-4 absolute z-0"
-        loading="lazy" 
-      />
-
-
-      <motion.div
-        ref={titleRef}
-        variants={fadeInUp}
-        initial="hidden"
-        animate={isTitleInView ? "visible" : "hidden"}
-        className="text-white font-geist font-bold text-2xl md:text-3xl px-6 md:px-[6.6vw]  lg:px-[6rem] flex flex-col gap-4 mt-48"
-      >
-        <div className="flex items-center" id="project-home">
-          <img
-            src={square}
-            alt="Square Icon"
-            className="size-9"
-            loading="lazy"
-          />
-          <h1 className="pl-4 md:pl-[1rem] lg:ml-[-0.5rem] font-['Geist'] tracking-wide">
-            Our Projects
-          </h1>
-        </div>
-        <div className="border-gradient-custom w-[7rem] shadow-[0px_0px_7px_0px_rgba(0,221,255,1.00)] outline outline-[3px] outline-offset-[-2.50px] outline-cyan-400/40 rounded"></div>
-      </motion.div>
+        <motion.div
+          ref={titleRef}
+          variants={fadeInUp}
+          initial="hidden"
+          animate={isTitleInView ? "visible" : "hidden"}
+          className="text-white font-geist font-bold text-2xl md:text-3xl px-6 md:px-[6.6vw]  lg:px-[6rem] flex flex-col gap-4 mt-48"
+        >
+          <div className="flex items-center" id="project-home">
+            <img
+              src={square}
+              alt="Square Icon"
+              className="size-9"
+              loading="lazy"
+            />
+            <h1 className="pl-4 md:pl-[1rem] lg:ml-[-0.5rem] font-['Geist'] tracking-wide">
+              Our Projects
+            </h1>
+          </div>
+          <div className="border-gradient-custom w-[7rem] shadow-[0px_0px_7px_0px_rgba(0,221,255,1.00)] outline outline-[3px] outline-offset-[-2.50px] outline-cyan-400/40 rounded"></div>
+        </motion.div>
       </div>
 
- 
       <motion.div
         ref={headingRef}
         variants={fadeInUp}
@@ -151,7 +148,7 @@ const Projects = () => {
             liveUrl=""
             buttonText="View Website"
             imagePosition="left"
-            statuss="Under Development"
+            statuss="In Progress"
           />
         </CardWrapper>
 
@@ -165,7 +162,7 @@ const Projects = () => {
             liveUrl=""
             buttonText="View Website"
             imagePosition="right"
-            statuss="Under Development "
+            statuss="In Progress"
           />
         </CardWrapper>
 
@@ -179,7 +176,7 @@ const Projects = () => {
             liveUrl=""
             buttonText="Coming Soon"
             imagePosition="left"
-            statuss="Initializing..."
+            statuss="Initializing.."
           />
         </CardWrapper>
       </div>
