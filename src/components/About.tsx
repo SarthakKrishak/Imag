@@ -8,7 +8,6 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import square from "/square.svg";
 import OrbitingCirclesAnimation from "./OrbitingCircle";
 
-// Type for the items
 const title: string[] = ["Innovation", "Integrity", "Creativity", "Excellence"];
 const desc: string[] = [
   "Constantly pushing boundaries and exploring new technologies",
@@ -21,12 +20,9 @@ const image: string[] = [img1, img2, img3, img4];
 const About = () => {
 
   useEffect(() => {
-    // Ensure window is defined (for SSR compatibility)
     if (typeof window === "undefined") return;
 
     gsap.registerPlugin(ScrollTrigger);
-
-    // Animation for title
     gsap.fromTo(
       "#about-home h1",
       { opacity: 0, y: -50 },

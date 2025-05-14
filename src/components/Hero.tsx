@@ -44,7 +44,7 @@ const Hero = () => {
               shouldAnimate ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }
             }
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="px-5 py-1 bg-gradient-to-r from-slate-950 to-sky-700 text-white outline outline-1 outline-blue-300 rounded-full text-[4.5vw] sm:text-[2.9vw] md:text-sm font-['Lexend'] font-medium"
+            className="px-5 py-1 bg-gradient-to-r from-slate-950 to-sky-700 text-white outline outline-1 outline-blue-300 rounded-full text-[2.4vw] sm:text-[2.7vw] md:text-sm font-['Lexend'] font-medium"
           >
             Innovate • Design • Build
           </motion.div>

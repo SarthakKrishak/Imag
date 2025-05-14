@@ -36,7 +36,7 @@ const Expertise = () => {
             className="size-9"
             loading="lazy"
           />
-          <h1 className="ml-[0.4rem] md:ml-[0.6rem] font-['Geist'] tracking-wide lg:ml-[-0.5rem]">
+          <h1 className="ml-[0.4rem] md:ml-[0.6rem] font-['Geist'] tracking-wide">
             Expertise
           </h1>
         </div>
