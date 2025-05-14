@@ -226,7 +226,7 @@ useEffect(() => {
           </div>
         </div>
 
-        <div className="absolute lg:w-[77.5vw] md:bottom-[7vh] w-[88vw] bottom-[2.5vh] md:w-[82vw] ">
+        <div className="absolute lg:w-[85vw] md:bottom-[7vh] w-[84vw] bottom-[2.5vh] md:w-[82vw] ">
           <div className=" w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-white mb-[1.3vh] md:mb-[2vh] lg:mb-[2.5vh]"></div>
           <div className="flex justify-between items-center">
             <div className="text-sm lg:text-md md:text-base text-white font-semibold lg:bottom-[6vh] cursor-default font-['Figtree'] tracking-wide hover:underline">

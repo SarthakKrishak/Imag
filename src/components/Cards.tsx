@@ -59,14 +59,14 @@ const Card: React.FC<CardProps> = ({
           src={image}
           alt="project"
           loading="lazy"
-          className="w-full lg:w-[42%] md:w-[40%] lg:h-full rounded-lg object-cover"
+          className="w-full h-full lg:w-[42%] md:w-[40%] lg:h-full rounded-lg object-cover"
         />
       ) : (
         <img
           src={image2}
           alt="project"
           loading="lazy"
-          className="w-full lg:w-[42%] md:w-[40%] lg:h-full rounded-lg object-cover"
+          className="w-full lg:w-[37%] md:w-[40%] lg:h-full rounded-lg object-cover"
         />
       )}
 
