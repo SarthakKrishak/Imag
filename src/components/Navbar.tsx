@@ -4,21 +4,14 @@ import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
- 
+
   useEffect(() => {
     const handleScroll = () => {
-      if (isOpen) {
-        setIsOpen(false);
-      }
+      if (isOpen) setIsOpen(false);
     };
 
-    if (isOpen) {
-      window.addEventListener("scroll", handleScroll);
-    }
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    if (isOpen) window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [isOpen]);
 
   const menuVariants = {
@@ -37,15 +30,14 @@ const Navbar = () => {
     },
   };
 
-const linkVariants = {
-  hidden: { opacity: 0, x: 10 },
-  visible: (i: number) => ({
-    opacity: 1,
-    x: 0,
-    transition: { delay: i * 0.05 },
-  }),
-};
-
+  const linkVariants = {
+    hidden: { opacity: 0, x: 10 },
+    visible: (i: number) => ({
+      opacity: 1,
+      x: 0,
+      transition: { delay: i * 0.05 },
+    }),
+  };
 
   return (
     <header className="w-full top-0 z-50">
@@ -56,7 +48,7 @@ const linkVariants = {
         <a
           href="/"
           aria-label="Navigate to home"
-          className="text-white font-medium md:text-[1.8vw] text-xl"
+          className="text-white font-medium md:text-[2.8vw] lg:text-[1.8vw] text-xl"
         >
           <h1 className="font-['Paytone_One']">Imaginum</h1>
         </a>
@@ -93,38 +85,33 @@ const linkVariants = {
             >
               <div className="hidden md:block">
                 <ul className="flex flex-row gap-6 relative font-['Geist'] capitalize leading-loose">
-                  {[
-                    { label: "Home", id: "navbar-home" },
-                    { label: "About", id: "about-home" },
-                    { label: "Projects", id: "project-home" },
-                    { label: "Contact", id: "contact-home" },    
-                  ].map((item, index) => (
-                    <motion.li
-                      key={item.label}
-                      custom={index}
-                      initial="hidden"
-                      animate="visible"
-                      variants={linkVariants}
-                    >
-                      <button
-                        onClick={() => {
-                          document
-                            .getElementById(item.id)
-                            ?.scrollIntoView({ behavior: "smooth" });
-                          setIsOpen(false);
-                        }}
-                        className="text-base font-semibold text-white transition-all duration-300 ease-out 
-                          hover:scale-110 hover:-translate-x-1 hover:text-transparent 
-                          bg-gradient-to-r from-white to-gray-400 bg-clip-text 
-                          before:absolute before:bottom-0 before:left-0 before:h-0.5 
-                          before:w-0 before:bg-gradient-to-r before:from-white before:to-gray-500 
-                          before:transition-all before:duration-300 hover:before:w-full relative"
-                        aria-label={`Navigate to ${item.label}`}
-                      >
-                        {item.label}
-                      </button>
-                    </motion.li>
-                  ))}
+                  {["Home", "About", "Projects", "Contact"].map(
+                    (label, index) => {
+                      const id = `${label.toLowerCase()}-home`;
+                      return (
+                        <motion.li
+                          key={label}
+                          custom={index}
+                          initial="hidden"
+                          animate="visible"
+                          variants={linkVariants}
+                        >
+                          <button
+                            onClick={() => {
+                              document
+                                .getElementById(id)
+                                ?.scrollIntoView({ behavior: "smooth" });
+                              setIsOpen(false);
+                            }}
+                            className="text-base font-semibold text-white transition-all duration-300 ease-out hover:scale-110 hover:-translate-x-1 hover:text-transparent bg-gradient-to-r from-white to-gray-400 bg-clip-text before:absolute before:bottom-0 before:left-0 before:h-0.5 before:w-0 before:bg-gradient-to-r before:from-white before:to-gray-500 before:transition-all before:duration-300 hover:before:w-full relative"
+                            aria-label={`Navigate to ${label}`}
+                          >
+                            {label}
+                          </button>
+                        </motion.li>
+                      );
+                    }
+                  )}
                 </ul>
               </div>
             </motion.nav>

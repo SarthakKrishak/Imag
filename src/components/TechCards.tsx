@@ -30,10 +30,10 @@ const TechCards = ({
   hover:shadow-[0_10px_25px_rgba(0,85,255,0.35)] hover:ring-1 hover:ring-[#339DFF]/40 duration-700 ease-in-out"
       >
         <div>
-          <div className="rounded-xl w-12 h-12 lg:w-20 lg:h-20 flex items-center justify-center mb-4">
+          <div className="rounded-xl w-12 h-12 md:w-18 md:h-18 lg:w-20 lg:h-20 flex items-center justify-center mb-4">
             <img
               src={icon}
-              className="w-12 h-12 lg:w-20 lg:h-20 object-contain"
+              className="w-12 h-12 md:w-18 md:h-18 lg:w-20 lg:h-20 object-contain"
               alt="Icon"
             />
           </div>

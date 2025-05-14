@@ -14,13 +14,17 @@ const Hero = () => {
 
   const containerRef = useRef<HTMLDivElement | null>(null);
   const isInView = useInView(containerRef, { once: true });
-
-  // Only animate when both in view and loader has finished
   const shouldAnimate = isInView && loaderFinished;
 
-  // Handle loader completion
   const handleLoaderComplete = () => {
     setLoaderFinished(true);
+  };
+
+  const handleExploreClick = () => {
+    const aboutSection = document.getElementById("about-home");
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -33,20 +37,20 @@ const Hero = () => {
         transition={{ duration: 1, ease: "easeOut" }}
         className="lg:min-h-[85vh] min-h-[48vh] flex flex-col justify-between mt-16 py-8 px-6 md:px-12"
       >
-        <div className="flex flex-col items-center gap-6 text-center mt-[3vh] ms:mt-4 md:mt-0">
+        <div className="flex flex-col items-center gap-6 text-center mt-[3vh] md:mt-0">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={
               shouldAnimate ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }
             }
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="px-5 py-1 bg-gradient-to-r from-slate-950 to-sky-700 text-white outline outline-1 outline-blue-300 rounded-full text-[2.8vw] sm:text-[2.9vw] md:text-sm ont-['Lexend'] font-medium"
+            className="px-5 py-1 bg-gradient-to-r from-slate-950 to-sky-700 text-white outline outline-1 outline-blue-300 rounded-full text-[4.5vw] sm:text-[2.9vw] md:text-sm font-['Lexend'] font-medium"
           >
             Innovate • Design • Build
           </motion.div>
 
           <motion.h1
-            className="font-bold text-white text-[1.35rem] sm:text-[1.3vw] md:text-[2.5rem] lg:text-[2.9rem] capitalize font-['Geist'] leading-snug"
+            className="font-bold text-white text-[1.4rem] sm:text-[2vw] md:text-[2.5rem] lg:text-[2.9rem] leading-snug font-['Geist'] capitalize"
             initial={{ opacity: 0, y: 20 }}
             animate={
               shouldAnimate ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
@@ -68,12 +72,13 @@ const Hero = () => {
           <motion.button
             onMouseEnter={() => setIsHover(true)}
             onMouseLeave={() => setIsHover(false)}
+            onClick={handleExploreClick}
             initial={{ opacity: 0, y: 20 }}
             animate={
               shouldAnimate ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
             }
             transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
-            className="relative overflow-hidden rounded-3xl px-4 md:px-6 py-2 flex items-center bg-gradient-to-b from-white to-neutral-400 shadow-[0px_12px_60px_0px_rgba(57,143,255,0.60)] inline-flex"
+            className="relative overflow-hidden rounded-3xl px-6 py-2 flex items-center bg-gradient-to-b from-white to-neutral-400 shadow-[0px_12px_60px_0px_rgba(57,143,255,0.60)]"
             aria-label="Explore Now Button"
           >
             <motion.div
@@ -82,27 +87,15 @@ const Hero = () => {
               transition={{ duration: 0.4, ease: "easeInOut" }}
               className="absolute left-0 top-0 h-full bg-black z-0"
             />
-
-            <div
-              onClick={() => {
-                document
-                  .getElementById("about-home")
-                  ?.scrollIntoView({ behavior: "smooth" });
-              }}
-              className="relative z-10 flex items-center gap-2 cursor-pointer"
+            <span
+              className="relative z-10 text-[0.8rem] md:text-base font-['Geist'] capitalize text-black transition-colors duration-300"
+              style={{ color: isHover ? "#fff" : "#000" }}
             >
-              <motion.p
-                className="text-[0.7rem] md:text-base font-['Geist'] capitalize leading-loose"
-                animate={{ color: isHover ? "#FFFFFF" : "#000000" }}
-                transition={{ duration: 0.3 }}
-              >
-                Explore Now
-              </motion.p>
-            </div>
+              Explore Now
+            </span>
           </motion.button>
         </div>
 
-        {/* <TextHoverEffect text="IMAGINUM" /> */}
         <div className="relative">
           <TextHoverComp />
 
@@ -124,9 +117,10 @@ const Hero = () => {
             src={element}
             alt="Rotating element image"
             loading="lazy"
-            className="absolute  h-28  md:h-37 md:top-[-3rem] md:left-[-2.6rem] lg:h-40 lg:top-[-3.5rem] lg:left-14 left-[-16vw] top-[2rem] cursor-grab active:cursor-grabbing"
+            className="absolute h-24 sm:h-28 md:h-32 lg:h-40 top-[2rem] left-[-16vw] md:top-[-3rem] md:left-[-2.6rem] lg:top-[-3.5rem] lg:left-14 cursor-grab active:cursor-grabbing"
           />
         </div>
+
         <motion.img
           initial={{ opacity: 0 }}
           animate={shouldAnimate ? { opacity: 1 } : { opacity: 0 }}
@@ -145,7 +139,7 @@ const Hero = () => {
           src={element}
           alt="Rotating element image"
           loading="lazy"
-          className="absolute h-24 md:h-28 lg:right-28 lg:h-28 top-[6.5rem] md:right-12 right-[-12vw] cursor-grab active:cursor-grabbing"
+          className="absolute h-20 sm:h-24 md:h-28 top-[6.5rem] right-[-12vw] md:right-12 lg:right-28 cursor-grab active:cursor-grabbing"
         />
       </motion.div>
     </>

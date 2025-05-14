@@ -50,11 +50,11 @@ useEffect(() => {
     <div className="relative overflow-hidden">
       <footer
         id="footer"
-        className={` relative w-full text-white px-6 md:ml-[2.7rem] lg:px-32 lg:py-[30vh] md:py-[30vh] md:mb-0 lg:pr-52 transition-all duration-1000 transform ${
+        className={` relative w-full text-white px-6 lg:px-[4vw] md:ml-[2.7rem] lg:py-[30vh] md:py-[30vh] md:mb-0 lg:pr-52 transition-all duration-1000 transform ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
-        <div className="max-w-7xl mx-auto lg:flex gap-8 pb-24 md:pb-0 lg:pb-24 justify-between">
+        <div className="max-w-7xl mx-auto lg:flex gap-8 pb-28 md:pb-0 lg:pb-24 justify-between">
           <div>
             <a
               href="/"

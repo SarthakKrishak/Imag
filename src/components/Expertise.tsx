@@ -36,14 +36,14 @@ const Expertise = () => {
             className="size-9"
             loading="lazy"
           />
-          <h1 className="pl-4 md:pl-[1rem] font-['Geist'] tracking-wide lg:ml-[-0.5rem]">
+          <h1 className="ml-[0.4rem] md:ml-[0.6rem] font-['Geist'] tracking-wide lg:ml-[-0.5rem]">
             Expertise
           </h1>
         </div>
         <div className="border-gradient-custom w-[6rem] shadow-[0px_0px_7px_0px_rgba(0,221,255,1.00)] outline outline-[3px] outline-offset-[-2.50px] outline-cyan-400/40 rounded"></div>
       </div>
 
-      <div className="px-6 md:px-[6.6vw] lg:px-[6rem] text-3xl md:text-5xl mt-4">
+      <div className="px-6 md:px-[6.6vw] lg:px-[6rem] text-3xl md:text-4xl lg:text-5xl mt-4">
         <h1 className="text-[#A1B0D1] font-semibold font-['Figtree'] tracking-widest">
           We combine <span className="text-white">technical</span> <br />
           <span className="text-white">excellence</span> with creative

@@ -6,7 +6,18 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-  	extend: {
+	  extend: {
+		  animation: {
+			  'spin-slow': 'spin 20s linear infinite',
+			  'spin-slow-reverse': 'spinReverse 30s linear infinite',
+			  'spin-slower': 'spin 4s linear infinite',
+		  },
+		  keyframes: {
+			  spinReverse: {
+				  '0%': { transform: 'rotate(360deg)' },
+				  '100%': { transform: 'rotate(0deg)' },
+			  },
+		  },
   		fontFamily: {
   			poppins: [
   				'Poppins',

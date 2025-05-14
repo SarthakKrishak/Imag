@@ -87,13 +87,13 @@ const About = () => {
       <div className="text-white font-geist font-bold text-2xl md:text-3xl px-6 lg:px-[6rem] md:px-[6.6vw] flex flex-col gap-4">
         <div className="flex items-center">
           <img src={square} alt="image" className="size-7 md:size-9" />
-          <h1 className="pl-4 md:pl-[1rem] lg:ml-[-0.5rem]">About us</h1>
+          <h1 className="ml-[0.4rem] md:ml-[0.6rem]">About us</h1>
         </div>
         <div className="border-gradient-custom w-[6rem] shadow-[0px_0px_7px_0px_rgba(0,221,255,1.00)] outline outline-[3px] outline-offset-[-2.50px] outline-cyan-400/40 rounded" />
       </div>
 
       {/* Intro */}
-      <div className="px-6 lg:px-[6rem] md:px-[6.6vw] text-3xl md:text-5xl mt-4 md:mb-[6vh] lg:mb-0 mb-0">
+      <div className="px-6 lg:px-[6rem] md:px-[6.6vw] text-3xl md:text-4xl lg:text-5xl mt-4 md:mb-[6vh] lg:mb-0 mb-0">
         <h1 className="text-[#A1B0D1] font-semibold font-['Figtree'] tracking-widest">
           Innovating <br />
           with <span className="text-white">technology</span> to create <br />a
@@ -102,31 +102,29 @@ const About = () => {
       </div>
 
       {/* Features Section */}
-      <div className="flex flex-col lg:flex-row px-6 md:px-[6rem] md:mt-0 gap-14 lg:gap-8 items-center justify-between mt-12 lg:mt-[-5vh]">
-        <div className="grid grid-cols-2 gap-10 lg:px-6">
+      <div className="w-full flex flex-col lg:flex-row items-center justify-between px-6 md:px-24 lg:px-32 py-12 gap-12 lg:gap-20">
+        {/* Feature Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 w-full max-w-3xl">
           {title.map((e, i) => (
             <div
               key={i}
-              className="section-item max-w-[90vw] sm:w-[15rem] flex flex-col items-center gap-3"
+              className="section-item flex flex-col items-center text-center gap-3"
             >
-              <div className="flex flex-col items-center gap-2">
-                <img
-                  src={image[i]}
-                  alt={`icon-${i}`}
-                  className="h-[2.5rem] md:h-[2.5rem]"
-                />
-                <h1 className="text-white text-[1.25rem] md:text-[1.7rem] font-medium font-['Geist']">
-                  {e}
-                </h1>
-              </div>
-              <p className="text-white text-center px-4 sm:px-10 lg:text-base text-xs font-light mt-[-1vh] lg:mt-[-1vh] leading-5 font-['Figtree']">
+              <img src={image[i]} alt={`icon-${i}`} className="h-10 md:h-12" />
+              <h2 className="text-white text-lg md:text-xl font-semibold font-['Geist']">
+                {e}
+              </h2>
+              <p className="text-white text-sm md:text-base font-light leading-relaxed font-['Figtree'] px-4 sm:px-6">
                 {desc[i]}
               </p>
             </div>
           ))}
         </div>
 
-        <OrbitingCirclesAnimation/>
+        {/* Orbiting Icons */}
+        <div className="w-full max-w-[400px]">
+          <OrbitingCirclesAnimation />
+        </div>
       </div>
 
       {/* Background Blur Circle */}

@@ -9,7 +9,7 @@ const Contact = () => {
   return (
     <div
       id="contact-home"
-      className="min-h-[70vh] flex items-center justify-center px-4 md:mt-36 mt-24 lg:mb-10 mb-24 md:mb-0"
+      className="min-h-[70vh] flex items-center justify-center px-6 md:px-4 lg:px-0 md:mt-36 mt-24 lg:mb-10 mb-24 md:mb-0"
     >
       <motion.div
         className="rounded-2xl px-8 py-16 md:p-24 mx-[1.2rem] md:mx-[2.9rem] lg:mx-[6rem] text-center w-full text-white shadow-2xl flex flex-col gap-2"
@@ -66,7 +66,7 @@ const Contact = () => {
         </motion.p>
 
         <motion.div
-          className="flex flex-col lg:flex-row lg:pl-18 lg:pr-18 md:gap-3  gap-2 lg:gap-2 justify-evenly"
+          className="flex flex-col lg:flex-row lg:pl-18 lg:pr-18 md:gap-3 gap-2 lg:gap-2 justify-evenly"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
@@ -74,7 +74,7 @@ const Contact = () => {
         >
           <a
             href="mailto:Imaginum.org@gmail.com"
-            className="flex items-center gap-2 lg:px-10 px-12  md:py-5 lg:py-4  py-[1.7vh] font-semibold rounded-lg text-sm justify-start md:justify-center lg:w-[19vw] outline outline-1 outline-offset-[-1px] outline-neutral-700  bg-black/60 backdrop-blur-md text-white transition-all duration-500 
+            className="flex items-center gap-2 lg:px-10 px-12 md:py-5 lg:py-4  py-[1.7vh] font-semibold rounded-lg text-sm justify-start md:justify-center lg:w-[19vw] outline outline-1 outline-offset-[-1px] outline-neutral-700  bg-black/60 backdrop-blur-md text-white transition-all duration-500 
                 hover:scale-105 hover:shadow-xl hover:shadow-white/10 font-['Figtree'] tracking-wide ease-in-out"
           >
             <img

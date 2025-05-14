@@ -71,7 +71,7 @@ export default function GlowingTextEffect() {
           <div
             key={index}
             ref={letterRef}
-            className="relative inline-block text-4xl md:text-7xl lg:text-[11vw] font-black font-['Geist'] px-2 !cursor-default"
+            className="relative inline-block text-[10vw] mt-20 md:mt-20 md:text-[11vw] lg:text-[11vw] font-black font-['Geist'] px-2 !cursor-default"
             style={{ cursor: "default" }}
           >
             <span

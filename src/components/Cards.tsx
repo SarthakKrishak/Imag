@@ -73,7 +73,7 @@ const Card: React.FC<CardProps> = ({
       {/* Right Section */}
       <div className="flex flex-col items-start justify-center w-full h-full">
         {/* Title and subtitle */}
-        <div className="md:text-xl lg:text-5xl text-3xl font-semibold font-['Figtree'] md:pl-7 pl-3 lg:pt-5 flex flex-col gap-2">
+        <div className="md:text-3xl lg:text-5xl text-3xl font-semibold font-['Figtree'] md:pl-7 pl-3 lg:pt-5 flex flex-col gap-2">
           <h2>{name}</h2>
           <span className="text-[#6683C1] font-normal">{subtitle}</span>
         </div>
@@ -88,7 +88,7 @@ const Card: React.FC<CardProps> = ({
           {tags.map((tag, index) => (
             <span
               key={index}
-              className="px-6 lg:px-5 lg:py-[0.8vh] py-[0.5vh] lg:text-sm text-base md:text-sm rounded-2xl outline outline-[0.58px] outline-offset-[-0.58px] outline-blue-300"
+              className="px-6 lg:px-5 lg:py-[0.8vh] py-[0.5vh] lg:text-sm text-base md:text-xs rounded-2xl outline outline-[0.58px] outline-offset-[-0.58px] outline-blue-300"
             >
               {tag}
             </span>

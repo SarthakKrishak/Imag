@@ -94,7 +94,7 @@ const Projects = () => {
               className="size-9"
               loading="lazy"
             />
-            <h1 className="pl-4 md:pl-[1rem] lg:ml-[-0.5rem] font-['Geist'] tracking-wide">
+            <h1 className="ml-[0.4rem] md:ml-[0.6rem] font-['Geist'] tracking-wide">
               Our Projects
             </h1>
           </div>
@@ -107,7 +107,7 @@ const Projects = () => {
         variants={fadeInUp}
         initial="hidden"
         animate={isHeadingInView ? "visible" : "hidden"}
-        className="px-6 md:px-[6.6vw] lg:px-[6rem] text-3xl md:text-5xl mt-4 z-20"
+        className="px-6 md:px-[6.6vw] lg:px-[6rem] text-3xl md:text-4xl lg:text-5xl mt-4 z-20"
       >
         <h1 className="text-[#A1B0D1] font-['Figtree'] tracking-widest font-semibold">
           We build <br />
